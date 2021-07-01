@@ -1,0 +1,15 @@
+{
+  "name": "normal_hylian_shield",
+  "version": "2.0.0",
+  "description": "No more turtle-shelling as child Link with the Hylian Shield!",
+  "main": "normal_hylian_shield.js",
+  "core": "OcarinaofTime",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Neirn",
+  "credits": "Original version by JerryWester",
+  "license": "GPLv3",
+  "updateUrl": "https://raw.githubusercontent.com/Neirn/normal_hylian_shield/master/update.json"
+}
