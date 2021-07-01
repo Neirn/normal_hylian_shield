@@ -168,6 +168,7 @@ class NormalHylianShield implements IPlugin {
             } catch (error) {
                 this.ModLoader.logger.error(error.message);
                 this.ModLoader.logger.error("Error reading NHS settings! Loading default values...")
+                this.resetDefaults();
             }
         } else this.resetDefaults();
     }
