@@ -1,5 +1,5 @@
 import { EventHandler, EventsClient } from 'modloader64_api/EventHandler';
-import { IPlugin, IModLoaderAPI } from 'modloader64_api/IModLoaderAPI';
+import { IPlugin, IModLoaderAPI, ModLoaderEvents } from 'modloader64_api/IModLoaderAPI';
 import { IOOTCore, OotEvents } from 'modloader64_api/OOT/OOTAPI';
 import { InjectCore } from 'modloader64_api/CoreInjection';
 import { onViUpdate } from 'modloader64_api/PluginLifecycle';
@@ -174,6 +174,17 @@ class NormalHylianShield implements IPlugin {
     }
     postinit() { }
     onTick() { }
+
+    // fuck you
+    @EventHandler(ModLoaderEvents.ON_SOFT_RESET_POST)
+    onSoftResetPost() {
+        this.init();
+    }
+
+    @EventHandler(ModLoaderEvents.ON_SOFT_RESET_PRE)
+    cleanUp() {
+        this.ModLoader.heap?.free(this.offset);
+    }
 
     updateHandMatrix() {
         this.ModLoader.emulator.rdramWriteBuffer(this.childHandShieldMtxPtr, guMtxF2L(ref2RTSF(this.handMtx)));
