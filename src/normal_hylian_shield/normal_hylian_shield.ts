@@ -96,12 +96,12 @@ function guRTSF(r: number, p: number, h: number, x: number, y: number, z: number
     r = r * (Math.PI / 180);
     p = p * (Math.PI / 180);
     h = h * (Math.PI / 180);
-    sinr = Math.sin(r);//Sine Roll
-    cosr = Math.cos(r);//Cosine Roll
-    sinp = Math.sin(p);//Sine Pitch
-    cosp = Math.cos(p);//Cosine Pitch
-    sinh = Math.sin(h);//Sine Heading
-    cosh = Math.cos(h);//Cosine Heading
+    sinr = Math.sin(r);     //Sine Roll
+    cosr = Math.cos(r);     //Cosine Roll
+    sinp = Math.sin(p);     //Sine Pitch
+    cosp = Math.cos(p);     //Cosine Pitch
+    sinh = Math.sin(h);     //Sine Heading
+    cosh = Math.cos(h);     //Cosine Heading
 
     mf[0][0] = (cosp * cosh) * s;
     mf[0][1] = (cosp * sinh) * s;
