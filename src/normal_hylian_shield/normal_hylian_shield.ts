@@ -183,7 +183,7 @@ class NormalHylianShield implements IPlugin {
 
     @EventHandler(ModLoaderEvents.ON_SOFT_RESET_PRE)
     cleanUp() {
-        this.ModLoader.heap?.free(this.offset);
+        this.ModLoader.heap!.free(this.offset);
     }
 
     updateHandMatrix() {
